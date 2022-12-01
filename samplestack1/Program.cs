@@ -5,11 +5,11 @@ namespace StackUsingLinkedList_CSharp
     class Node
     {
         public int info;
-        public Node Node;
+        public Node next;
         public Node(int i, Node n)
         {
             info = 1;
-            Next = n;
+            next = n;
         }
     }
     class Stacks
@@ -44,9 +44,9 @@ namespace StackUsingLinkedList_CSharp
 
         public void display()
         {
-            Node tap;
-            if (empty(//if stack is empty));
-                Console.WriteLine("\nStack Empty");
+            Node tmp;
+            if (empty()) //if stack is empty
+            Console.WriteLine("\nStack Empty");
             else
             {
                 //Traverse the list from begginning till end
@@ -72,6 +72,29 @@ namespace StackUsingLinkedList_CSharp
                 string sInput = Console.ReadLine();
                 char ch = Convert.ToChar(sInput == "" ? "0" : sInput);
                 switch (ch)
+                {
+                    case '1':
+                        Console.Write("\nEnter a number: ");
+                        int num = Convert.ToInt32(Console.ReadLine());
+                        s.push(num);
+                        break;
+                    case '2':
+                        if (s.empty())
+                        {
+                            Console.WriteLine("\nStack Empty");
+                            break;
+                        }
+                        s.pop();
+                        break;
+                    case '3':
+                        s.display();
+                        break;
+                    case '4':
+                        return;
+                    default:
+                        Console.WriteLine("\nInvalid Choice");
+                        break;
+                }
             }
         }
     }
