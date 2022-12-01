@@ -46,8 +46,16 @@ namespace StackUsingLinkedList_CSharp
         {
             Node tap;
             if (empty(//if stack is empty));
-                top = top.next;
-            //Make top point to the next node in sequence
+                Console.WriteLine("\nStack Empty");
+            else
+            {
+                //Traverse the list from begginning till end
+                for (tmp = top; tmp != null; tmp = tmp.next)
+                {
+                    Console.WriteLine(tmp.info);
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
