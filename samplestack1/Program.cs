@@ -9,7 +9,7 @@ namespace StackUsingLinkedList_CSharp
         public Node(int i, Node n)
         {
             info = 1;
-            next = n;
+            Next = n;
         }
     }
 }
